@@ -28,7 +28,10 @@ html {
                        "Footer Footer Footer";
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 3rem 2rem 1fr 2rem;
-  gap: 3rem 2rem;
+  gap: 2rem 2rem;
+  width: 80%;
+  margin: 0 auto;
+  max-width: 30rem;
 
 }
 .Footer {
@@ -44,6 +47,7 @@ html {
 
 .Header-Title {
   text-align: center;
+  margin-top: 1rem;
 }
 
 .Header-Title__title {
@@ -67,12 +71,11 @@ html {
 
 .Nav__menu {
   display: flex;
-  align-self: center;
-  justify-self: center;
-  justify-content: center;
   flex-direction: row;
-  align-content: space-between;
-  justify-content: space-between;
+  justify-content: space-evenly;
+  align-content: center;
+  padding-top: .5rem;
+
 }
 
 .Nav__menu-item {
