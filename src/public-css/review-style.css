@@ -1,0 +1,29 @@
+* {
+    box-sizing: border-box ;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+
+}
+.coffee-card { 
+    /* align-items: flex-start; */
+    border: 1px;
+    border-radius: 0.25rem;
+    display: grid;
+    /* display: flex; */
+    /* flex-direction: column; */
+
+} 
+/* .coffee-card__style {
+    /* display: flex; */
+
+/* }  */
+/* .coffee-card__review {
+
+} */
+.wrapper {
+    display: grid;
+    grid-template-rows: 4rem 10rem 4rem 4rem;
+    min-height: 100vh; 
+}
+
