@@ -15,5 +15,47 @@ font-family: 'Open Sans', sans-serif;
 /* Default 20pixels to 1ine-height */
 html {
   font: 20px/1 'Open Sans';
-  
+  --navbar-background-color: rgba(13, 3, 102, 0.75);
+}
+
+.wrapper {
+  display: grid;
+  grid-template-areas: "Header Header Header"
+                       "Nav Nav Nav"
+                       "Main Main Main"
+                       "Footer Footer Footer";
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 5rem 1fr .5fr;
+
+}
+
+.Header {
+  grid-area: Header;
+  display: flexbox;
+  align-content: center;
+  justify-content: center;
+}
+
+.Header-Title {
+  text-align: center;
+}
+
+.Header-Title__title {
+  text-align: center;
+}
+
+.Header-Title_subtitle {
+  text-align: center;
+  padding: 1rem;
+  margin: 1rem;
+}
+
+.Header-Title__subtitle {
+  text-align: center;
+}
+
+.Navbar {
+  grid-area: Nav;
+  min-height: 5rem;
+  background-color: var(--navbar-background-color);
 }
