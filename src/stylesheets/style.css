@@ -15,7 +15,9 @@ font-family: 'Open Sans', sans-serif;
 /* Default 20pixels to 1ine-height */
 html {
   font: 20px/1 'Open Sans';
+  min-height: 100vh;
   --navbar-background-color: rgba(13, 3, 102, 0.75);
+  --navbar-text-color: white;
 }
 
 .wrapper {
@@ -25,8 +27,12 @@ html {
                        "Main Main Main"
                        "Footer Footer Footer";
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 5rem 1fr .5fr;
+  grid-template-rows: 3rem 2rem 1fr 2rem;
+  gap: 3rem 2rem;
 
+}
+.Footer {
+  grid-area: Footer;
 }
 
 .Header {
@@ -54,8 +60,21 @@ html {
   text-align: center;
 }
 
-.Navbar {
+.Nav {
   grid-area: Nav;
-  min-height: 5rem;
   background-color: var(--navbar-background-color);
+}
+
+.Nav__menu {
+  display: flex;
+  align-self: center;
+  justify-self: center;
+  justify-content: center;
+  flex-direction: row;
+  align-content: space-between;
+  justify-content: space-between;
+}
+
+.Nav__menu-item {
+  color: var(--navbar-text-color);
 }
