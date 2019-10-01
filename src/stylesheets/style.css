@@ -1,8 +1,19 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+/* Reset Default Styling */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
+/* Import Fonts */
+@import url('https://fonts.googleapis.com/css?family=Lora|Noto+Sans+TC|Open+Sans&display=swap');
+/* 
+font-family: 'Lora', serif;
+font-family: 'Noto Sans TC', sans-serif;
+font-family: 'Open Sans', sans-serif; 
+*/
 
-a {
-  color: #00B7FF;
+/* Default 20pixels to 1ine-height */
+html {
+  font: 20px/1 'Open Sans';
+  
 }
