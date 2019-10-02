@@ -12,6 +12,17 @@ img {
     width: 100px;
   }
 
+.wrapper__review {
+  display: flex;
+}
+
+.coffee-card {
+  justify-content: center;
+  align-items: space-between;
+  max-width: 80%;
+  padding: 5rem;  
+  }
+  
 .coffee-card { 
     display: grid;
     grid-template-rows: 10rem 15rem 10rem 10rem;
