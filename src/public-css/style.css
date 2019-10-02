@@ -36,6 +36,10 @@ html {
 }
 .Footer {
   grid-area: Footer;
+  color: var(--navbar-text-color);
+  background-color: var(--navbar-background-color);
+  text-align: center;
+  padding-top: .5rem;
 }
 
 .Header {
@@ -63,6 +67,27 @@ html {
 .Header-Title__subtitle {
   text-align: center;
 }
+
+.Main {
+  grid-area: Main;
+}
+
+.Main__Recently-Reviewed-Table {
+  width: 100%;
+}
+
+.Main__Recently-Reviewed-Table thead{
+  padding: .5rem;
+  margin: .5rem;
+}
+
+.Main__Recently-Reviewed-Table tr,td{
+  padding: .5rem 1rem;
+}
+
+/* .Main__Recently-Reviewed-Table tr:first-child {
+  text-transform: capitalize;
+} */
 
 .Nav {
   grid-area: Nav;
