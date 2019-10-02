@@ -34,6 +34,17 @@ html {
   max-width: 30rem;
 
 }
+
+.wrapper__review {
+  display: flex;
+}
+.coffee-card {
+  justify-content: center;
+  align-items: space-between;
+  max-width: 80%;
+  padding: 5rem;
+
+}
 .Footer {
   grid-area: Footer;
   color: var(--navbar-text-color);
