@@ -63,7 +63,12 @@ html {
 .Header-Title__subtitle {
   text-align: center;
 }
-
+.Main{
+  grid-area:  Main;
+}
+.Main__Recently-Reviewed-Table{
+  padding: .5rem 2rem;
+}
 .Nav {
   grid-area: Nav;
   background-color: var(--navbar-background-color);
