@@ -2,7 +2,7 @@ class Review{
 
     constructor(props){
         this.author = props.author; 
-        this.review = props.review;
+        this.reviewBody = props.review;
         this.reviewItem = props.reviewItem;
         this.tags = props.tags;
     }
@@ -10,7 +10,7 @@ class Review{
         this.author = writer
     };
     setReview(words){
-        this.review = words
+        this.reviewBody = words
     };
     setReviewItem(item){
         this.reviewItem = item
@@ -22,7 +22,7 @@ class Review{
         return this.author;
     };
     getReview(){
-        return this.review;
+        return this.reviewBody;
     };
     getReviewItem(){
         return this.reviewItem;
