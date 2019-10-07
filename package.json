@@ -3,7 +3,8 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "nodemon ./bin/www"
+    "start": "nodemon ./bin/www",
+    "test": "jest --colors --watchAll"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
@@ -11,8 +12,12 @@
     "express": "~4.16.1",
     "hbs": "~4.0.4",
     "http-errors": "~1.6.3",
+    "jest": "^24.9.0",
     "morgan": "~1.9.1",
     "mysql2": "^1.7.0",
     "nodemon": "^1.19.3"
+  },
+  "devDependencies": {
+    "supertest": "^4.0.2"
   }
 }
