@@ -4,8 +4,8 @@ var router = express.Router();
 const reviewController = require('../src/controllers/review-controller')
 // Nuthin', just developing and stuff
 /* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('index', reviewController.renderAll);
-});
+router.get('/', reviewController.renderAll);
+/* POST new review */
+router.post('/', reviewController.addReview);
 
 module.exports = router;

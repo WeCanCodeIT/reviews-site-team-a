@@ -9,7 +9,12 @@ class ReviewController {
         })
     }
     static addReview (req, res) {
-        reviewService.save((new reviewDomainObject(author, reviewBody, reviewItem, category)), newReview => {
+        const author = req.body.author;
+        const reviewBody = req.body.reviewBody;
+        const reviewItem = req.body.reviewItem;
+        const category = req.body.category;
+    
+        reviewService.save(new reviewDomainObject(author, reviewBody, reviewItem, category), (newReview) => {
             console.log(newReview);
             res.redirect("/index");
         })
