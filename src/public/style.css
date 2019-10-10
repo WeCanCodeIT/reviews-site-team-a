@@ -18,6 +18,8 @@ html {
   min-height: 100vh;
   --navbar-background-color: rgba(13, 3, 102, 0.75);
   --navbar-text-color: white;
+  --form-background-color: rgba(13, 3, 102, 0.75);
+  --form-border-color: rgba(3, 60, 87, 0.9);
 }
 
 .wrapper {
@@ -122,17 +124,55 @@ html {
 .Nav__menu-item {
   color: var(--navbar-text-color);
 }
-
+.review-card__title {
+  max-width: 8rem;
+}
 .review-card-wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-items: center;
+  min-width: 4rem;
+  max-width: 6rem;
+}
+
+.review-form__form {
+  color: var(--navbar-text-color);
+  display: flex;
+  flex-direction: column;
+  align-content: space-between;
+  border: .2rem solid var(--form-border-color);
+
+}
+
+.review-form__form label {
+  padding: 1rem;
+  /* margin: 1rem; */
+}
+
+.review-form-wrapper {
+  background-color: var(--form-background-color);
 }
 
 .review-items-wrapper {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
+  margin: 2rem;
   
+}
+
+#submitButton{
+  align-self: center;
+  width: 8rem;
+  height: 2rem;
+  border-style: inset;
+  border-color: slategray;
+  border-radius: 25%;
+  margin: 1rem;
+}
+
+#submitButton:hover{
+  border-color: palevioletred;
+  border-style: outset;
 }
