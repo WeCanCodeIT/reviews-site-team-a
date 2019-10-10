@@ -5,10 +5,13 @@ class Review{
         this.category = category;
         this.reviewBody = reviewBody;
         this.reviewItem = reviewItem;
-        this.tags = [];
+        this.tags = "";
+        this._tags = [];
     }
     addTags(tag) {
-        this.tags.push(tags)
+        this._tags.push(tag)
+        let tagToString = this._tags.join(", ")
+        this.tags = tagToString;
     };
     removeTag(tag) {
         // One way of doing it --

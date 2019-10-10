@@ -5,7 +5,8 @@ const Review = require('../models/Review.sequelize');
 class ReviewController {
     static renderAll (req, res) {
         reviewService.findAll((reviews) => {
-            res.render("index", { reviews })
+            console.log(reviews);
+            res.render("index", { reviews: reviews })
         })
     }
     static addReview (req, res) {
@@ -16,7 +17,7 @@ class ReviewController {
     
         reviewService.save(new reviewDomainObject(author, reviewBody, reviewItem, category), (newReview) => {
             console.log(newReview);
-            res.redirect("/index");
+            res.redirect("/");
         })
     }
 }

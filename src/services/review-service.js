@@ -7,5 +7,4 @@ module.exports = {
     save (newReview, callback) {
         Review.create(newReview, callback).then(callback);
     }
-
 }

@@ -10,7 +10,8 @@ const Review = db.define('review', {
     },
     description: { 
         type: Sequelize.STRING, 
-        allowNull: false
+        allowNull: true,
+        default: "No Description"
     },
     reviewItem: {
         type: Sequelize.STRING,
