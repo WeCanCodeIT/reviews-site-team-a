@@ -1,10 +1,37 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>{{title}}</title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
-    {{{body}}}
-  </body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href = "/style.css">
+    <title>Home Page</title>
+</head>
+<body>
+    <div class = "wrapper">
+        <header class="Header">
+            <p class="Header-Title">
+                <h1 class = "Header-Title__title">Capital City Reviews</h1>
+                <h4 class = "Header-Title__subtitle">Currently reviewing coffee!</h4>
+            </p>
+        </header>
+
+        <nav class="Nav">
+            <div class="Nav__menu">
+                <p class="Nav__menu-item">About Us</p>
+                <p class="Nav__menu-item">More Coffee</p>
+                <p class="Nav__menu-item">Our Parners</p>
+                <p class="Nav__menu-item">Donate</p>
+            </div>
+        </nav>
+
+        <main class="Main">
+            <p> Capital City Reviews is a directory service and crowd sourcing review forum. Here are the newest reviews that have been written:</p>
+            {{{body}}}
+
+        </main>
+        <footer class="Footer">
+            Capital City Industries LLC Corp &copy;
+        </footer>
+    </div>
+</body>
 </html>
