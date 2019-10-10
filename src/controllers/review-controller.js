@@ -2,7 +2,7 @@ const reviewDomainObject = require('../models/Review');
 const reviewService = require('../services/review-service');
 const Review = require('../models/Review.sequelize');
 
-class ReviewController {
+class ReviewController { 
     static renderAll (req, res) {
         reviewService.findAll((reviews) => {
             console.log(reviews);
