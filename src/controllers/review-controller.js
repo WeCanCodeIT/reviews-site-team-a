@@ -7,7 +7,13 @@ class ReviewController {
         reviewService.findAll((reviews) => {
             res.render("index", { reviews })
         })
-    } 
+    }
+    static addReview (req, res) {
+        reviewService.save((new reviewDomainObject(author, reviewBody, reviewItem, category)), newReview => {
+            console.log(newReview);
+            res.redirect("/index");
+        })
+    }
 }
 
 module.exports = ReviewController;

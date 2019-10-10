@@ -1,5 +1,14 @@
-<p> This is just a test thing </p>
-<div class="card-wrapper">
-    <img class="card__image" href="{{Review.imgUrl}}">
-    <h2 class="card__title">{{Review.item}}</h2>
-</div> 
+
+
+<div class="review-items-wrapper">
+    {{#each reviews}}
+    <div class="review-card-wrapper">
+        <h3 class="review-card__title">{{reviewItem}}</h3>
+        <img class="review-card__image" href="{{imgUrl}}">
+        <h6 class="review-card__category">{{category}}</h6>
+    </div> 
+    {{/each}}
+
+
+
+</div>

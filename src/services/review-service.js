@@ -2,12 +2,11 @@ const Review = require('../models/Review.sequelize');
 
 module.exports = {
     findAll () {
-        let reviews;
-        Review.findAll().then((res) => {
-            reviews = res.dataValues;
-            console.log(reviews);
-        })
-        return reviews;
+        Review.findAll(callback).then(callback)
+    },
+    save (newReview) {
+        Review.create(newReview, callback)
+        .then(callback);
     }
 
 }
