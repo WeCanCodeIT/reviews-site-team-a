@@ -15,6 +15,7 @@ font-family: 'Open Sans', sans-serif;
 a {
   text-decoration: none;
 }
+
 a:hover {
   color: rgb(221, 70, 70);
 }
@@ -124,22 +125,22 @@ html {
   justify-content: space-evenly;
   align-content: center;
   padding-top: .5rem;
-
 }
 
 .Nav__menu-item {
   color: var(--navbar-text-color);
 }
+
 .review-card__title {
   max-width: 8rem;
 }
+
 .review-card-wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-items: center;
-  min-width: 4rem;
-  max-width: 6rem;
+  justify-content: center;
+  min-width: 8rem;
 }
 
 .review-form__form {
@@ -148,7 +149,6 @@ html {
   flex-direction: column;
   align-content: space-between;
   border: .2rem solid var(--form-border-color);
-
 }
 
 .review-form__form label {
@@ -165,8 +165,22 @@ html {
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
   margin: 2rem;
+}
+
+
+.single-review-card__header-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  align-items: center;  
+  min-width: 75%;
+
+}
+.single-review-card__body-wrapper {
   
 }
+
 
 #submitButton{
   font-size: 80%;
@@ -183,4 +197,9 @@ html {
   font-size: 100%;
   border-color: palevioletred;
   border-style: outset;
+}
+
+.single-review-card__body{
+
+    
 }

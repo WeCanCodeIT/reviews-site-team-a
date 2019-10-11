@@ -1,12 +1,12 @@
-
-
 <div class="review-items-wrapper">
     {{#each reviews}}
-    <div class="review-card-wrapper">
-        <h3 class="review-card__title">{{reviewItem}}</h3>
-        <img class="review-card__image" href="{{imgUrl}}"/>
-        <h6 class="review-card__category">{{category}}</h6>
-    </div> 
+        <div class="review-card-wrapper">
+            <a href = "/review/{{id}}">
+            <h3 class="review-card__title">{{reviewItem}}</h3>
+            <img class="review-card__image" href="{{imgUrl}}"/>
+            <h6 class="review-card__category">{{category}}</h6>
+            </a>
+        </div> 
     {{/each}}
 </div>
 <div class="review-form-wrapper">
