@@ -9,6 +9,14 @@ class ReviewController {
             res.render("index", { reviews: reviews })
         })
     }
+    static renderReview (req, res) {
+        const id = req.params.id;
+
+        reviewService.findReview(id, (review) => {
+            console.log(review);
+            res.render("review", { review : review });
+        })
+    }
     static addReview (req, res) {
         const author = req.body.author;
         const reviewBody = req.body.reviewBody;

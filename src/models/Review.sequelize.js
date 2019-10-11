@@ -13,6 +13,11 @@ const Review = db.define('review', {
         allowNull: true,
         default: "No Description"
     },
+    reviewBody: { 
+        type: Sequelize.STRING, 
+        allowNull: true,
+        default: "No Review"
+    },
     reviewItem: {
         type: Sequelize.STRING,
         allowNull: false
@@ -25,5 +30,7 @@ const Review = db.define('review', {
     tags: Sequelize.STRING,
     category: Sequelize.STRING
     }
+
 )
 module.exports = Review;
+

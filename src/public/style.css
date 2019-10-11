@@ -11,8 +11,14 @@ font-family: 'Lora', serif;
 font-family: 'Noto Sans TC', sans-serif;
 font-family: 'Open Sans', sans-serif; 
 */
-
 /* Default 20pixels to 1ine-height */
+a {
+  text-decoration: none;
+}
+a:hover {
+  color: rgb(221, 70, 70);
+}
+
 html {
   font: 20px/1 'Open Sans';
   min-height: 100vh;
@@ -163,6 +169,7 @@ html {
 }
 
 #submitButton{
+  font-size: 80%;
   align-self: center;
   width: 8rem;
   height: 2rem;
@@ -173,6 +180,7 @@ html {
 }
 
 #submitButton:hover{
+  font-size: 100%;
   border-color: palevioletred;
   border-style: outset;
 }

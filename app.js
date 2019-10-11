@@ -39,7 +39,7 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
-sequelize.sync({force: true})
+sequelize.sync()
   .then(() => console.log('DB Connected'))
   .catch(console.error)
 
