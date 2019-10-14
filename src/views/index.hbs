@@ -1,27 +1,37 @@
-
-
 <div class="review-items-wrapper">
     {{#each reviews}}
-    <div class="review-card-wrapper">
-        <h3 class="review-card__title">{{reviewItem}}</h3>
-        <img class="review-card__image" href="{{imgUrl}}">
-        <h6 class="review-card__category">{{category}}</h6>
-    </div> 
+        <div class="review-card-wrapper">
+            <a href = "/review/{{id}}">
+            <h3 class="review-card__title">{{reviewItem}}</h3>
+            <img class="review-card__image" href="{{imgUrl}}"/>
+            <h6 class="review-card__category">{{category}}</h6>
+            </a>
+        </div> 
     {{/each}}
 </div>
-
-<form action="/reviews" method="POST">
-    <label>Review Coffee: <input type="text" name="reviewItem"></label>
-    <label> Review Body: <input type="text" name="reviewBody"> </label>
-    <label> Category: 
-        <select name="category">  
-            <option value="Cold Brew"></option>
-            <option value="Decaf"></option> 
-            <option value="Regular"></option> 
-            <option value="Tea"></option> 
-        </select>
-    </label>
-    <label> First Name: <input type="text" name="firstName"> </label>
-    <label> Last Name: <input type="text" name="lastName"> </label>
-    <button>Review all the kaffee aqui　皆さん　¯\_(ツ)_/¯ </button>
-</form> 
+<div class="review-form-wrapper">
+    <form class="review-form__form" action="/" method="POST">
+        <label>Review Coffee: <select name="reviewItem">  
+                <option value="Americano">Americano</option>
+                <option value="Solo (Espresso)">Solo (Espresso)</option> 
+                <option value="Cafe Latte">Cafe Latte</option> 
+                <option value="Cold Brew">Cold Brew</option> 
+                <option value="Cafe Latte">Regular (Caffeine)</option> 
+                <option value="Decaf">Decaf</option> 
+                <option value="Tea">Tea</option> 
+            </select><br>
+        </label>
+        <label>   Review Body:   <input type="text" name="reviewBody">    </label> 
+        <label> Category: 
+            <select name="category">  
+                <option value="Cold Brew">Cold Brew</option>
+                <option value="Decaf">Decaf</option> 
+                <option value="Regular">Regular (Caffeine)</option> 
+                <option value="Tea">Tea</option> 
+            </select><br>
+        </label>
+        <label> Author: <input type="text" name="author"> </label>
+        
+        <button id="submitButton">¯\_(ツ)_/¯ </button>
+    </form> 
+</div>

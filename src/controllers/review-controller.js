@@ -2,10 +2,19 @@ const reviewDomainObject = require('../models/Review');
 const reviewService = require('../services/review-service');
 const Review = require('../models/Review.sequelize');
 
-class ReviewController {
+class ReviewController { 
     static renderAll (req, res) {
         reviewService.findAll((reviews) => {
-            res.render("index", { reviews })
+            console.log(reviews);
+            res.render("index", { reviews: reviews })
+        })
+    }
+    static renderReview (req, res) {
+        const id = req.params.id;
+
+        reviewService.findReview(id, (review) => {
+            console.log(review);
+            res.render("review", { review : review });
         })
     }
     static addReview (req, res) {
@@ -16,7 +25,7 @@ class ReviewController {
     
         reviewService.save(new reviewDomainObject(author, reviewBody, reviewItem, category), (newReview) => {
             console.log(newReview);
-            res.redirect("/index");
+            res.redirect("/");
         })
     }
 }
