@@ -1,13 +1,28 @@
 const Review = require('../models/Review.sequelize');
 
 module.exports = {
-    findAll (callback) {
-        Review.findAll().then(callback);
+    async findAll () {
+        try {
+            const reviews = await Review.findAll();
+            return reviews;
+        } catch (error) {
+            return error;
+        }
     },
-    findReview (id, callback) {
-        Review.findByPk(id).then(callback);
+    async findReview (id) {
+        try{
+            const review = await Review.findByPk(id);
+            return review;
+        } catch (error){
+            return error;
+        }
+
     },
-    save (newReview, callback) {
-        Review.create(newReview, callback).then(callback);
+    async save (newReview) {
+        try{
+            await Review.create(newReview);
+        } catch(error){
+            return error;
+        }
     }
 }

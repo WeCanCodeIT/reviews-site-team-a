@@ -1,6 +1,7 @@
 // Tags, Cat need relationship with Tag & Category table
 const db = require('../util/db')
 const Sequelize = require('sequelize');
+const MAX_CHARS = process.env.MAX_CHARS;
 
 const Review = db.define('review', {
     id: {
@@ -14,7 +15,7 @@ const Review = db.define('review', {
         default: "No Description"
     },
     reviewBody: { 
-        type: Sequelize.STRING, 
+        type: Sequelize.STRING(MAX_CHARS), 
         allowNull: true,
         default: "No Review"
     },
@@ -28,7 +29,8 @@ const Review = db.define('review', {
     },
     imgUrl: Sequelize.STRING,
     tags: Sequelize.STRING,
-    category: Sequelize.STRING
+    category: Sequelize.STRING,
+    reviewBodyMaxChars: Sequelize.INTEGER
     }
 
 )
