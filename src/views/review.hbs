@@ -3,5 +3,11 @@
     <h6 class="single-review-card__category">{{review.category}}</h6>
     <h3 class="single-review-card__author">{{review.author}}</h3>
     <p class="single-review-card__body">{{review.reviewBody}}</p>
-    {{!-- Need Tags --}}
-</div> 
+    Tags: 
+        <ul class="single-review-card__tags-list">
+    {{#each author}}
+            <li class="tags-list-item">{{review.tags}}</li>
+    {{/each}}
+        </ul>
+{{!-- Need Tags --}}
+</div>
