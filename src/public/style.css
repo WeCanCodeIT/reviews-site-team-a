@@ -122,3 +122,17 @@ html {
 .Nav__menu-item {
   color: var(--navbar-text-color);
 }
+
+.review-card-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+}
+
+.review-items-wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  
+}
