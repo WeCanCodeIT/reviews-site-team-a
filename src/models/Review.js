@@ -1,9 +1,9 @@
 class Review{ 
-
-    constructor(author, reviewBody, reviewItem, category){
+    constructor(author, reviewBody, reviewItem, category, reviewBodyMaxChars){
         this.author = author; 
         this.category = category;
         this.reviewBody = reviewBody;
+        this.reviewBodyMaxChars = reviewBodyMaxChars;
         this.reviewItem = reviewItem;
         this.tags = "";
         this._tags = [];
@@ -24,30 +24,6 @@ class Review{
         }
         this.tags = this.tags.filter(checkTag);
         // Still need to remove passed tag from the database here
-    }
-    setAuthor(writer){
-        this.author = writer
-    };
-    setReview(words){
-        this.reviewBody = words
-    };
-    setReviewItem(item){
-        this.reviewItem = item
-    };
-    setTags(hashtag){
-        this.tags = hashtag
-    };
-    getAuthor(){
-        return this.author;
-    };
-    getReview(){
-        return this.reviewBody;
-    };
-    getReviewItem(){
-        return this.reviewItem;
-    };
-    getTags(){
-        return this.tags;
     };
 };
 module.exports = Review;

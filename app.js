@@ -5,6 +5,9 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var sequelize = require('./src/util/db');
 
+// Set Max char length for review body
+process.env.MAX_CHARS = 512;
+
 var indexRouter = require('./routes/index');
 // var usersRouter = require('./routes/users');
 
@@ -39,7 +42,7 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
-sequelize.sync()
+sequelize.sync({force: true})
   .then(() => console.log('DB Connected'))
   .catch(console.error)
 

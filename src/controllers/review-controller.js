@@ -2,6 +2,9 @@ const reviewDomainObject = require('../models/Review');
 const reviewService = require('../services/review-service');
 const Review = require('../models/Review.sequelize');
 
+// Review Body Max Chars from environmental variable
+const MAX_CHARS = process.env.MAX_CHARS;
+
 class ReviewController { 
     // static renderAll (req, res) {
     //     reviewService.findAll((reviews) => {
@@ -25,7 +28,7 @@ class ReviewController {
             const review = await reviewService.findReview(id) 
             res.render("review", { review : review });
         } catch (error) {
-            res.render("error", {error: error} );
+            res.render("error", {error: error});
         }
     }
 
@@ -35,7 +38,7 @@ class ReviewController {
         const reviewItem = req.body.reviewItem;
         const category = req.body.category;
         try{
-            await reviewService.save(new reviewDomainObject(author, reviewBody, reviewItem, category));
+            await reviewService.save(new reviewDomainObject(author, reviewBody, reviewItem, category, MAX_CHARS));
             res.redirect("/");
         } catch(error) {
             res.render("error", {error: error});
