@@ -1,6 +1,7 @@
-// Tags, Cat need relationship with Tag & Category table
+ // Tags, Cat need relationship with Tag & Category table
 const db = require('../util/db')
 const Sequelize = require('sequelize');
+const Location = require('./Location.sequelize');
 const MAX_CHARS = process.env.MAX_CHARS;
 
 const Review = db.define('review', {
@@ -8,11 +9,6 @@ const Review = db.define('review', {
         type: Sequelize.INTEGER,
         primaryKey: true,
         autoIncrement: true
-    },
-    description: { 
-        type: Sequelize.STRING, 
-        allowNull: true,
-        default: "No Description"
     },
     reviewBody: { 
         type: Sequelize.STRING(MAX_CHARS), 
@@ -28,11 +24,11 @@ const Review = db.define('review', {
         allowNull: false
     },
     imgUrl: Sequelize.STRING,
-    tags: Sequelize.STRING,
-    location: Sequelize.STRING,
     reviewBodyMaxChars: Sequelize.INTEGER
     }
-
 )
+Review.belongsTo(Location, {constraints: false, onDelete: 'CASCADE'});
+Location.hasMany(Review);
+
 module.exports = Review;
 

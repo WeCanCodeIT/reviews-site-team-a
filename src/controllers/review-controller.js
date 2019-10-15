@@ -37,9 +37,12 @@ class ReviewController {
         const author = req.body.author;
         const reviewBody = req.body.reviewBody;
         const reviewItem = req.body.reviewItem;
-        const location = req.body.location;
+        const locationId = req.body.locationId;
+        const tagId = req.body.tagId;
+        const reviewObject = new reviewDomainObject(author, reviewBody, reviewItem, locationId, MAX_CHARS);
+        reviewObject.tagId = tagId;
         try{
-            await reviewService.save(new reviewDomainObject(author, reviewBody, reviewItem, location, MAX_CHARS));
+            await reviewService.save(reviewObject);
             res.redirect("/");
         } catch(error) {
             res.render("error", {error: error});

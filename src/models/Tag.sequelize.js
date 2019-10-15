@@ -1,19 +1,13 @@
 const db = require('../util/db')
 const Sequelize = require('sequelize');
 
-const Location = db.define('location', {
+const Tag = db.define('tag', {
     id: {
         type: Sequelize.INTEGER,
         primaryKey: true,
         autoIncrement: true,
         allowNull: false
     },
-    location: { 
-        type: Sequelize.STRING, 
-        allowNull: false,
-        default: "No Name",
-        unique: true
-    }
+    name: Sequelize.STRING
 });
-
-module.exports = Location;
+module.exports = Tag;

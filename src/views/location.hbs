@@ -1,0 +1,12 @@
+<div class="location-wrapper">
+    <form class="location__list" action="/" method="POST">
+        <label> Cafe / Restuarant : </label>
+            <ul name="location">  
+                {{#each locations}}
+                    <p value="{{name}}">{{name}}</p>
+                {{/each}}
+            </ul>
+
+        <button id="submitButton">Enter </button>
+    </form> 
+</div>

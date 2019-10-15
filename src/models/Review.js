@@ -1,12 +1,9 @@
 class Review { 
-    constructor(author, reviewBody, reviewItem, location, reviewBodyMaxChars){
+    constructor(author, reviewBody, reviewItem, reviewBodyMaxChars){
         this.author = author; 
-        this.location = location;
         this.reviewBody = reviewBody;
         this.reviewBodyMaxChars = reviewBodyMaxChars;
         this.reviewItem = reviewItem;
-        this.tags = "";
-        this._tags = [];
     }
     addTags(tag) {
         this._tags.push(tag)

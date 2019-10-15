@@ -7,7 +7,7 @@ class LocationController {
     static async renderAll (req, res) {
         try {
             const locations = await locationService.findAll();
-            res.render("index", {locations: locations});
+            res.render("location", {locations: locations});
 
         } catch (error) {
             res.render("error", {error: error});
@@ -15,7 +15,7 @@ class LocationController {
     }
 
     static async renderLocation (req, res) {
-        const id = req.id;
+        const id = req.params.id;
         try{
             const location = await locationService.findLocation(id) 
             res.render("location", { location : location });

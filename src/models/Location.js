@@ -1,6 +1,6 @@
 class Location{
     constructor (name){
-        this.name = name;
+        this.location = name;
     }
 }
 module.exports = Location;

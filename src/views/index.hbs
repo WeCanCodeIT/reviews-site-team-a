@@ -12,9 +12,9 @@
 <div class="review-form-wrapper">
     <form class="review-form__form" action="/" method="POST">
         <label> Cafe / Restuarant : 
-            <select name="location">  
+            <select name="locationId">  
                 {{#each locations}}
-                    <option value="{{name}}">{{name}}</option>
+                    <option value="{{locationId}}">{{name}}</option>
                 {{/each}}
             </select>
         </label>

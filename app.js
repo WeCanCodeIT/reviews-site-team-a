@@ -5,6 +5,9 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var sequelize = require('./src/util/db');
 const createBaseData = require('./src/util/db-base-content');
+const Locations = require('./src/models/Location.sequelize');
+const Tag = require('./src/models/Tag.sequelize');
+const Review = require('./src/models/Review.sequelize');
 
 // Set Max char length for review body
 process.env.MAX_CHARS = 512;
@@ -43,7 +46,12 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
-sequelize.sync({force: false})
+// Locations.belongsTo(Review);
+// Review.belongsToMany(Tag, {through: 'review_tags'});
+// Locations.hasMany(Reviews, {through: 'LocationsReview'});
+// Tags.hasMany(Review, {through: 'TagsReview'});
+
+sequelize.sync({force: true})
   .then(() => {
     console.log('BullShit DB Connected');
     createBaseData();
