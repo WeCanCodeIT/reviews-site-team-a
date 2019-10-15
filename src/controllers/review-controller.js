@@ -39,7 +39,8 @@ class ReviewController {
         const reviewItem = req.body.reviewItem;
         const locationId = req.body.locationId;
         const tagId = req.body.tagId;
-        const reviewObject = new reviewDomainObject(author, reviewBody, reviewItem, locationId, MAX_CHARS);
+        const reviewObject = new reviewDomainObject(author, reviewBody, reviewItem, MAX_CHARS);
+        reviewObject.locationId = locationId;
         reviewObject.tagId = tagId;
         try{
             await reviewService.save(reviewObject);
@@ -49,6 +50,4 @@ class ReviewController {
         }
     }     
 }
-
-
 module.exports = ReviewController;

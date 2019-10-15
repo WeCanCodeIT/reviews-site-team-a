@@ -14,15 +14,16 @@
         <label> Cafe / Restuarant : 
             <select name="locationId">  
                 {{#each locations}}
-                    <option value="{{id}}">{{name}}</option>
+                    <option value="{{id}}">{{location}}</option>
                 {{/each}}
             </select>
         </label>
         <label>Review Coffee: 
             <select name="reviewItem">  
-                {{#each Review}}
-                <option value="{{reviewItem}}">{{reviewItem}}</option> 
-                {{/each}}
+                    <option value="Espresso (Solo)">Espresso (Solo)</option> 
+                    <option value="Coffee">Coffee</option>
+                    <option value="Cold Brew">Cold Brew</option> 
+                    <option value="Tea">Tea</option> 
             </select>
             <br>
         </label>
