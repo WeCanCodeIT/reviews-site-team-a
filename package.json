@@ -3,7 +3,8 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "nodemon nodemon/www"
+    "start": "nodemon ./bin/www",
+    "test": "jest --colors --watchAll"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
@@ -12,6 +13,12 @@
     "hbs": "~4.0.4",
     "http-errors": "~1.6.3",
     "morgan": "~1.9.1",
-    "nodemon": "^1.19.3"
+    "mysql2": "^1.7.0",
+    "nodemon": "^1.19.3",
+    "sequelize": "^5.19.5",
+    "supertest": "^4.0.2"
+  },
+  "devDependencies": {
+    "jest": "^24.9.0"
   }
 }

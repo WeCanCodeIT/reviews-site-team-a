@@ -1,0 +1,41 @@
+* {
+    box-sizing: border-box ;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+
+}
+img {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+    width: 100px;
+  }
+
+.wrapper__review {
+  display: flex;
+}
+
+.coffee-card {
+  justify-content: center;
+  align-items: space-between;
+  max-width: 80%;
+  padding: 5rem;  
+  }
+  
+.coffee-card { 
+    display: grid;
+    grid-template-rows: 10rem 15rem 10rem 10rem;
+    grid-template-columns: 40rem;
+
+} 
+
+ .coffee-card__element {
+
+    display: flex;
+    align-items: center;
+    justify-items:stretch;
+
+ }
+
+
