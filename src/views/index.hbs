@@ -4,13 +4,20 @@
             <a href = "/review/{{id}}">
             <h3 class="review-card__title">{{reviewItem}}</h3>
             <img class="review-card__image" href="{{imgUrl}}"/>
-            <h6 class="review-card__category">{{category}}</h6>
+            <h6 class="review-card__location">{{location}}</h6>
             </a>
         </div> 
     {{/each}}
 </div>
 <div class="review-form-wrapper">
     <form class="review-form__form" action="/" method="POST">
+        <label> Cafe / Restuarant : 
+            <select name="location">  
+                {{#each locations}}
+                    <option value="{{name}}">{{name}}</option>
+                {{/each}}
+            </select>
+        </label>
         <label>Review Coffee: <select name="reviewItem">  
                 <option value="Americano">Americano</option>
                 <option value="Solo (Espresso)">Solo (Espresso)</option> 
@@ -22,14 +29,6 @@
             </select><br>
         </label>
         <label>   Review Body:   <input type="text" name="reviewBody">    </label> 
-        <label> Category: 
-            <select name="category">  
-                <option value="Cold Brew">Cold Brew</option>
-                <option value="Decaf">Decaf</option> 
-                <option value="Regular">Regular (Caffeine)</option> 
-                <option value="Tea">Tea</option> 
-            </select><br>
-        </label>
         <label> 
             Author: 
             <input type="text" name="author"></input>

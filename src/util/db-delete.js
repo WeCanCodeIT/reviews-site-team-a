@@ -2,7 +2,7 @@ const dbtest = require('./db');
 
 const reviewOne = {
     name: 'Solo',
-    category: ''
+    location: ''
 }
 
 const newValue = 'Not Coffee';

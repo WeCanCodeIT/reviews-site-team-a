@@ -1,7 +1,7 @@
-class Review{ 
-    constructor(author, reviewBody, reviewItem, category, reviewBodyMaxChars){
+class Review { 
+    constructor(author, reviewBody, reviewItem, location, reviewBodyMaxChars){
         this.author = author; 
-        this.category = category;
+        this.location = location;
         this.reviewBody = reviewBody;
         this.reviewBodyMaxChars = reviewBodyMaxChars;
         this.reviewItem = reviewItem;

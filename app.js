@@ -4,6 +4,7 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var sequelize = require('./src/util/db');
+const createBaseData = require('./src/util/db-base-content');
 
 // Set Max char length for review body
 process.env.MAX_CHARS = 512;
@@ -42,8 +43,11 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
-sequelize.sync({force: true})
-  .then(() => console.log('DB Connected'))
+sequelize.sync({force: false})
+  .then(() => {
+    console.log('BullShit DB Connected');
+    createBaseData();
+  })
   .catch(console.error)
 
 module.exports = app;

@@ -178,7 +178,7 @@ html {
 
 }
 .single-review-card__body-wrapper {
-  
+  margin-right: center;
 }
 
 
@@ -199,7 +199,6 @@ html {
   border-style: outset;
 }
 
-.single-review-card__body{
-
-    
+.single-review-card__body-wrapper{
+  margin-block-end: auto
 }

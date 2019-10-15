@@ -29,7 +29,7 @@ const Review = db.define('review', {
     },
     imgUrl: Sequelize.STRING,
     tags: Sequelize.STRING,
-    category: Sequelize.STRING,
+    location: Sequelize.STRING,
     reviewBodyMaxChars: Sequelize.INTEGER
     }
 

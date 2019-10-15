@@ -8,6 +8,10 @@ router.get('/', reviewController.renderAll);
 // GET single review page
 router.get('/review/:id', reviewController.renderReview);
 
+// Need a Locations route...
+// -------
+
+
 /* POST new review */
 router.post('/', reviewController.addReview);
 

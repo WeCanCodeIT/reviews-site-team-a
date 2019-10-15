@@ -1,14 +1,14 @@
 <div class="single-review-card__wrapper">
     <h3 class="single-review-card__title">{{review.reviewItem}}</h3>
-    <h6 class="single-review-card__category">{{review.category}}</h6>
-    <h3 class="single-review-card__author">{{review.author}}</h3>
+    <h5 class="single-review-card__location">{{review.location}}</h6>
+    <h6 class="single-review-card__author">{{review.author}}</h3>
     <p class="single-review-card__body">{{review.reviewBody}}</p>
-    <label class="single-review-card__tags-wrapper">Tags: 
+    <label class="single-review-card__tags-wrapper"> 
+        Tags: 
         <ul class="single-review-card__tags-list">
     {{#each tags}}
             <li class="tags-list-item">{{review.tags}}</li>
     {{/each}}
         </ul>
     </label>
-{{!-- Need Tags --}}
 </div>
