@@ -18,9 +18,10 @@ module.exports = {
         }
 
     },
-    async save (newReview) {
+    async save (newReview, tagIds) {
         try{
             await Review.create(newReview);
+            Review.addTags(tagIds)
         } catch(error){
             return error;
         }

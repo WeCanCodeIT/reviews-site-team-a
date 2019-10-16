@@ -6,12 +6,7 @@ const locationService = require('../services/location-service');
 const MAX_CHARS = process.env.MAX_CHARS;
 
 class ReviewController { 
-    // static renderAll (req, res) {
-    //     reviewService.findAll((reviews) => {
-    //         console.log(reviews);
-    //         res.render("index", { reviews: reviews })
-    //     })
-    // }
+
     static async renderAll (req, res) {
         try {
             const reviews = await reviewService.findAll();
@@ -34,16 +29,17 @@ class ReviewController {
     }
 
     static async addReview (req, res) {
+        console.log(req.body);
         const author = req.body.author;
         const reviewBody = req.body.reviewBody;
         const reviewItem = req.body.reviewItem;
         const locationId = req.body.locationId;
-        const tagId = req.body.tagId;
+        const tagId = req.body.tags;
         const reviewObject = new reviewDomainObject(author, reviewBody, reviewItem, MAX_CHARS);
         reviewObject.locationId = locationId;
         reviewObject.tagId = tagId;
         try{
-            await reviewService.save(reviewObject);
+            await reviewService.save(reviewObject, tagId);
             res.redirect("/");
         } catch(error) {
             res.render("error", {error: error});
