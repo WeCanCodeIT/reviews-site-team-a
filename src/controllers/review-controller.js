@@ -22,7 +22,8 @@ class ReviewController {
         const id = req.params.id;
         try{
             const review = await reviewService.findReview(id) 
-            res.render("review", { review : review });
+            const tags = await review.getTags();
+            res.render("review", { review : review, tags: tags });
         } catch (error) {
             res.render("error", {error: error});
         }
@@ -34,12 +35,27 @@ class ReviewController {
         const reviewBody = req.body.reviewBody;
         const reviewItem = req.body.reviewItem;
         const locationId = req.body.locationId;
-        const tagId = req.body.tags;
+        
+        let tagStringIds;
+
+        if (req.body.tags === undefined) {
+            tagStringIds = [];
+        } else if (typeof req.body.tags === "string") {
+            tagStringIds = [req.body.tags]
+        } else {
+            tagStringIds
+        }
+
+        const tagIds = [];
+
+        tagStringIds.forEach((tag) => {
+            tagIds.push(Number(tag));
+        });
+
         const reviewObject = new reviewDomainObject(author, reviewBody, reviewItem, MAX_CHARS);
         reviewObject.locationId = locationId;
-        reviewObject.tagId = tagId;
         try{
-            await reviewService.save(reviewObject, tagId);
+            await reviewService.save(reviewObject, tagIds);
             res.redirect("/");
         } catch(error) {
             res.render("error", {error: error});

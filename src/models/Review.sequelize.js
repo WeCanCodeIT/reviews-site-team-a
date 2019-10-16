@@ -27,8 +27,7 @@ const Review = db.define('review', {
     reviewBodyMaxChars: Sequelize.INTEGER
 });
 
-Review.belongsToMany(Tag, {through: 'review_tags'});
-Tag.belongsToMany(Review, {through: 'review_tags'});
+
 
 module.exports = Review;
 
