@@ -1,2 +1,12 @@
-<h1>{{title}}</h1>
-<p>Welcome to {{title}}</p>
+<p class="review-header">Capital City Reviews is a directory service and crowd sourcing review forum. Here are the newest reviews that have been written:</p>
+<div class="review-items-wrapper">
+    {{#each reviews}}
+        <div class="review-card-wrapper">
+            <a href = "/review/{{id}}">
+            <h3 class="review-card__title">{{reviewItem}}</h3>
+            <img class="review-card__image" href="{{imgUrl}}"/>
+            <h6 class="review-card__location">{{location}}</h6>
+            </a>
+        </div> 
+    {{/each}}
+</div>

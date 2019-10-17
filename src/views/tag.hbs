@@ -1,0 +1,21 @@
+<div class="tag-card__wrapper">
+  <main>
+    <h1 class="tag-card__title">{{tag.name}}</h1>
+        <p class="tag-card__body"> 
+        <ul>
+            {{#each}}
+            <li>   </li>
+            {{/each}}
+
+        </ul>
+         </p>
+    <label class="single-review-card__tags-wrapper"> 
+        Tags: 
+        <ul class="single-review-card__tags-list">
+    {{#each tags}}
+            <li class="tags-list-item">{{review.tags}}</li>
+    {{/each}}
+        </ul>
+    </label>
+    </main>
+</div>
