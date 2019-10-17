@@ -10,4 +10,5 @@ const Tag = db.define('tag', {
     },
     name: Sequelize.STRING
 });
+
 module.exports = Tag;

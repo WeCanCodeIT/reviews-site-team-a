@@ -13,6 +13,8 @@ const Review = require('./src/models/Review.sequelize');
 process.env.MAX_CHARS = 512;
 
 var indexRouter = require('./routes/index');
+var reviewRouter = require('./routes/review-router');
+var tagRouter = require('./routes/tag-router');
 // var usersRouter = require('./routes/users');
 
 var app = express();
@@ -28,6 +30,8 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, './src/public')));
 
 app.use('/', indexRouter);
+app.use('/review', reviewRouter);
+app.use('/tag', tagRouter);
 // app.use('/users', usersRouter);
 
 // catch 404 and forward to error handler

@@ -14,22 +14,21 @@
         <label> Cafe / Restuarant : 
             <select name="locationId">  
                 {{#each locations}}
-                    <option value="{{locationId}}">{{name}}</option>
+                    <option value="{{id}}">{{location}}</option>
                 {{/each}}
             </select>
         </label>
-        <label>Review Coffee: <select name="reviewItem">  
-                <option value="Americano">Americano</option>
-                <option value="Solo (Espresso)">Solo (Espresso)</option> 
-                <option value="Cafe Latte">Cafe Latte</option> 
-                <option value="Cold Brew">Cold Brew</option> 
-                <option value="Cafe Latte">Regular (Caffeine)</option> 
-                <option value="Decaf">Decaf</option> 
-                <option value="Tea">Tea</option> 
-            </select><br>
+        <label>Review Coffee: 
+            <select name="reviewItem">  
+                    <option value="Espresso (Solo)">Espresso (Solo)</option> 
+                    <option value="Coffee">Coffee</option>
+                    <option value="Cold Brew">Cold Brew</option> 
+                    <option value="Tea">Tea</option> 
+            </select>
+            <br>
         </label>
-        <label>   Review Body:   <input type="text" name="reviewBody">    </label> 
-        <label> 
+        <label>Review Body:<input type="text" name="reviewBody"></label> 
+        <label>
             Author: 
             <input type="text" name="author"></input>
         </label>

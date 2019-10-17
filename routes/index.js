@@ -5,11 +5,6 @@ const reviewController = require('../src/controllers/review-controller')
 // Nuthin', just developing and stuff
 /* GET home page. */
 router.get('/', reviewController.renderAll);
-// GET single review page
-router.get('/review/:id', reviewController.renderReview);
-
-// Need a Locations route...
-// -------
 
 
 /* POST new review */
