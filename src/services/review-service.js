@@ -22,6 +22,7 @@ module.exports = {
         try{
             const newReview = await Review.create(review);
             newReview.addTag(tagIds);
+            return newReview;
         } catch(error){
             return error;
         }

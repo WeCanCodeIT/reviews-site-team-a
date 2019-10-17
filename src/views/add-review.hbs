@@ -1,0 +1,46 @@
+<div class="review-items-wrapper">
+    {{#each reviews}}
+        <div class="review-card-wrapper">
+            <a href = "/review/{{id}}">
+            <h3 class="review-card__title">{{reviewItem}}</h3>
+            <img class="review-card__image" href="{{imgUrl}}"/>
+            <h6 class="review-card__location">{{location}}</h6>
+            </a>
+        </div> 
+    {{/each}}
+</div>
+<div class="review-form-wrapper">
+    <form class="review-form__form" action="/addreview" method="POST">
+        <label> Cafe / Restuarant : 
+            <select name="locationId">  
+                {{#each locations}}
+                    <option value="{{id}}">{{location}}</option>
+                {{/each}}
+            </select>
+        </label>
+        <label>Review this Coffee: 
+            <select name="reviewItem">  
+                    <option value="Espresso (Solo)">Espresso (Solo)</option> 
+                    <option value="Coffee">Coffee</option>
+                    <option value="Cold Brew">Cold Brew</option> 
+                    <option value="Tea">Tea</option> 
+                    <option value="Cafe Latte">Cafe Latte</option>
+            </select>
+            <br>
+        </label>
+         <label><textarea placeholder ="Write a review..." rows= "4" cols = "50" name="reviewBody"></textarea></label> 
+        <label>
+            Author: 
+            <input type="text" name="author"></input>
+        </label>
+        <label> 
+            Tags: <br>
+        </label>
+        <ul class="review-card__tags-list">
+            {{#each tags}}
+                <input class="review-card__tags-list-item"type="checkbox" name="tags" value={{id}}> {{name}}</input>
+            {{/each}}
+        </ul>
+        <button id="submitButton">¯\_(ツ)_/¯ </button>
+    </form> 
+</div>

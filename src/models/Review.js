@@ -1,5 +1,5 @@
 class Review { 
-    constructor(author, reviewBody, reviewItem, reviewBodyMaxChars){
+    constructor(author, reviewBody, reviewItem, reviewBodyMaxChars=512){
         this.author = author; 
         this.reviewBody = reviewBody;
         this.reviewBodyMaxChars = reviewBodyMaxChars;

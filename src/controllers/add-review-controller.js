@@ -8,26 +8,13 @@ const MAX_CHARS = process.env.MAX_CHARS;
 const DEFAULT_IMAGE = "../public/img/aromatic-beans-blur-773958.jpg"
 
 
-class ReviewController { 
-
+class AddReviewController { 
     static async renderAll (req, res) {
         try {
-            const reviews = await reviewService.findAll();
             const locations = await locationService.findAll();
             const tags = await tagService.findAll();
-            res.render("index", {reviews: reviews, locations: locations, tags: tags});
+            res.render("add-review", {locations: locations, tags: tags});
 
-        } catch (error) {
-            res.render("error", {error: error});
-        }
-    }
-
-    static async renderReview (req, res) {
-        const id = req.params.id;
-        try{
-            const review = await reviewService.findReview(id) 
-            const tags = await review.getTags();
-            res.render("review", { review : review, tags: tags });
         } catch (error) {
             res.render("error", {error: error});
         }
@@ -42,7 +29,6 @@ class ReviewController {
         const imgUrl = (req.body.imgUrl !== undefined) ? 
             DEFAULT_IMAGE :
             req.body.imgUrl;
-
         
         let tagStringIds;
 
@@ -63,11 +49,12 @@ class ReviewController {
         const reviewObject = new reviewDomainObject(author, reviewBody, reviewItem, MAX_CHARS);
         reviewObject.locationId = locationId;
         try{
-            await reviewService.save(reviewObject, tagIds);
-            res.redirect("/");
+            const newReview = await reviewService.save(reviewObject, tagIds);
+            console.log("*** New Review*** \n\n ", newReview, "\n\n");
+            res.redirect("/review/" + newReview.id);
         } catch(error) {
             res.render("error", {error: error});
         }
     }     
 }
-module.exports = ReviewController;
+module.exports = AddReviewController;

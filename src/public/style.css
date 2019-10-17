@@ -6,16 +6,15 @@
 }
 /* Import Fonts */
 @import url('https://fonts.googleapis.com/css?family=Lora|Noto+Sans+TC|Open+Sans&display=swap');
-/* 
-font-family: 'Lora', serif;
-font-family: 'Noto Sans TC', sans-serif;
-font-family: 'Open Sans', sans-serif; 
-*/
-/* Default 20pixels to 1ine-height */
+
+
 a {
   text-decoration: none;
+  color: black; 
 }
-
+a:visited{
+  color:rgba(71, 172, 255, 0.945);
+}
 a:hover {
   color: rgb(221, 70, 70);
 }
@@ -27,7 +26,26 @@ html {
   --navbar-text-color: white;
   --form-background-color: rgba(13, 3, 102, 0.75);
   --form-border-color: rgba(3, 60, 87, 0.9);
+
+  /* background-image: url("./img/aromatic-beans-blur-773958.jpg"); */
+  
 }
+
+.wrapper::before {
+  background-image: url(./img/aromatic-beans-blur-773958.jpg);
+  background-attachment:local;
+  background-repeat: no-repeat;
+  background-size: cover;
+  content: "";
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 45em;
+  z-index: -2;
+  opacity: 0.2568999;
+  }
 
 .wrapper {
   /* Grid Stuff */
@@ -41,7 +59,6 @@ html {
   margin: 0 auto;
   max-width: 50rem;
   min-width: 8rem;
-
 }
 
 .wrapper__review {
@@ -91,8 +108,10 @@ html {
 }
 
 .Main {
+  
   grid-row: 3 / 4;
   grid-column: 1 / 4;
+  
 }
 
 .Main__Recently-Reviewed-Table {
@@ -108,10 +127,6 @@ html {
 .Main__Recently-Reviewed-Table tr,td{
   padding: .5rem 1rem;
 }
-
-/* .Main__Recently-Reviewed-Table tr:first-child {
-  text-transform: capitalize;
-} */
 
 .Nav {
   grid-row: 2;
@@ -131,6 +146,20 @@ html {
   color: var(--navbar-text-color);
 }
 
+.location-card {
+  font: 30px/1 'Open Sans';
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: .2rem solid var(--form-border-color);
+  padding: 1rem;
+}
+#locationId {
+
+  padding: 2rem;
+}
+
 .review-card__title {
   max-width: 8rem;
 }
@@ -141,30 +170,31 @@ html {
   align-items: center;
   justify-content: center;
   min-width: 8rem;
+  
 }
 
 .review-form__form {
-  color: var(--navbar-text-color);
+  /* color: var(--navbar-text-color); */
   display: flex;
   flex-direction: column;
   align-content: space-between;
-  border: .2rem solid var(--form-border-color);
+  
 }
 
 .review-form__form label {
   padding: 1rem;
-  /* margin: 1rem; */
 }
 
-.review-form-wrapper {
-  background-color: var(--form-background-color);
-}
+/* .review-form-wrapper {
+  /* background-color: var(--form-background-color); */
+/* } */ 
 
 .review-items-wrapper {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
   margin: 2rem;
+  border: .2rem solid var(--form-border-color);
 }
 
 

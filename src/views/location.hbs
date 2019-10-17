@@ -1,12 +1,35 @@
-<div class="location-wrapper">
-    <form class="location__list" action="/" method="POST">
-        <label> Cafe / Restuarant : </label>
-            <ul name="location">  
+<div class="locations-wrapper">
+    <form class="locations" action="/location" method="POST">
+    {{#if locations}}
+        <label class = "location-card"> Cafes / Restuarants : 
+           <br>
+           <br>
+            <ul name="locationId">  
                 {{#each locations}}
-                    <p value="{{name}}">{{name}}</p>
+                    <a href='/location/{{id}}'><li value="{{id}}">{{location}}</li></a>
+                <br>
                 {{/each}}
             </ul>
-
-        <button id="submitButton">Enter </button>
+        </label>
+        <br>
+        <section class="join-instruction__location">
+            <label>Add your Cafe to our network!</label>
+            <br>
+            <a href='/donate/'><p>Join!</p></a>
+        </section>
+    {{/if}}
+    {{#if location}}
+        <label class = "location-card"> {{name}}
+            <br>
+            <p class="location-card__reviews-title">Reviews:</p>
+            <br>
+            <ul class="location-card__reviews-list">
+                {{#each reviews}}
+                    <a href='/review/{{id}}'><li>{{reviewItem}}</li></a>
+                {{/each}}
+            </ul>
+        </label>
+    {{/if}}
     </form> 
+
 </div>

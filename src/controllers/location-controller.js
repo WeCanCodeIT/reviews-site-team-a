@@ -18,7 +18,8 @@ class LocationController {
         const id = req.params.id;
         try{
             const location = await locationService.findLocation(id) 
-            res.render("location", { location : location });
+            const reviews = await location.getReviews();
+            res.render("location", { location : location, reviews: reviews });
         } catch (error) {
             res.render("error", {error: error});
         }

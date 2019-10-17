@@ -1,3 +1,4 @@
+<p class="review-header">Capital City Reviews is a directory service and crowd sourcing review forum. Here are the newest reviews that have been written:</p>
 <div class="review-items-wrapper">
     {{#each reviews}}
         <div class="review-card-wrapper">
@@ -8,43 +9,4 @@
             </a>
         </div> 
     {{/each}}
-</div>
-<div class="review-form-wrapper">
-    <form class="review-form__form" action="/" method="POST">
-        <label> Cafe / Restuarant : 
-            <select name="locationId">  
-                {{#each locations}}
-                    <option value="{{id}}">{{location}}</option>
-                {{/each}}
-            </select>
-        </label>
-        <label>Review Coffee: 
-            <select name="reviewItem">  
-                    <option value="Espresso (Solo)">Espresso (Solo)</option> 
-                    <option value="Coffee">Coffee</option>
-                    <option value="Cold Brew">Cold Brew</option> 
-                    <option value="Tea">Tea</option> 
-            </select>
-            <br>
-        </label>
-        <label>Review Body:<input type="text" name="reviewBody"></label> 
-        <label>
-            Author: 
-            <input type="text" name="author"></input>
-        </label>
-        <label> 
-            Tags: <br>
-        </label>
-        <ul class="review-card__tags-list">
-            <input class="review-card__tags-list-item"type="checkbox" name="tags" value=1>Bitter</input>
-            <input class="review-card__tags-list-item"type="checkbox" name="tags" value="Water">Water</input>
-            <input class="review-card__tags-list-item"type="checkbox" name="tags" value="Hot">Hot</input>
-            <input class="review-card__tags-list-item"type="checkbox" name="tags" value="Cold">Cold</input>
-            <input class="review-card__tags-list-item"type="checkbox" name="tags" value="Strong">Strong</input>
-            <input class="review-card__tags-list-item"type="checkbox" name="tags" value="Flavored">Flavored</input>
-            <input class="review-card__tags-list-item"type="checkbox" name="tags" value="Foamy">Foamy</input>
-            <input class="review-card__tags-list-item"type="checkbox" name="tags" value="Misc">Miscellaneous</input>
-        </ul>
-        <button id="submitButton">¯\_(ツ)_/¯ </button>
-    </form> 
 </div>
