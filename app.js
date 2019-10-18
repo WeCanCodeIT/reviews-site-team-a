@@ -55,10 +55,6 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
-// Locations.belongsTo(Review);
-// Review.belongsToMany(Tag, {through: 'review_tags'});
-// Locations.hasMany(Reviews, {through: 'LocationsReview'});
-// Tags.hasMany(Review, {through: 'TagsReview'});
 
 sequelize.sync({force: true})
   .then(() => {

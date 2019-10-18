@@ -26,13 +26,13 @@ const baseTagsList = [
 // sample { author: "Brad", reviewBody: "The review", reviewItem: "Coffee"}
 // Tags: Bitter, Water, Hot, Cold, Strong, Flavored, Roomy, Sweet
 const baseReviewPopulation = [
-  { tags: ["1", "3", "5"], author: "Brad", reviewBody: "Object Oriented Programming", reviewItem: "Solo", imgUrl: "http://placekitten.com/g/200/300", locationId: "4"},
-  { tags: ["3", "4", "1", "8"], author: "The Whistler", reviewBody: "few feeeeewww wfff wfff feeeeeeeeeew!", reviewItem: "Tea", imgUrl: "http://placekitten.com/g/200/300", locationId: "2"},
-  { tags: ["1", "2"], author: "Zack", reviewBody: "She's a brick house. She's mighty mighty, just lettin' it all hang out!", reviewItem: "Americano", imgUrl: "http://placekitten.com/g/200/300", locationId: "5"},
-  { tags: ["3", "4", "6", "7"], author: "DJ Khalid", reviewBody: "THIS IS THE BEST! WHY AM I YELLING?!", reviewItem: "Cafe Latte", imgUrl: "http://placekitten.com/g/200/300", locationId: "1"},
+  { tags: ["1", "3", "5"], author: "Brad", reviewBody: "Object Oriented Programming", reviewItem: "Solo", imgUrl: "../img/aromatic-beans-blur-773958.jpg", locationId: "4"},
+  { tags: ["3", "4", "1", "8"], author: "The Whistler", reviewBody: "few feeeeewww wfff wfff feeeeeeeeeew!", reviewItem: "Tea", imgUrl: "../img/caffeine-coffee-camericanoup-6347.jpg", locationId: "2"},
+  { tags: ["1", "2"], author: "Zack", reviewBody: "She's a brick house. She's mighty mighty, just lettin' it all hang out!", reviewItem: "Americano", imgUrl: "../img/coffee-983955_640.jpg", locationId: "5"},
+  { tags: ["3", "4", "6", "7"], author: "DJ Khalid", reviewBody: "THIS IS THE BEST! WHY AM I YELLING?!", reviewItem: "Cafe Latte", imgUrl: "../img/DJ_Khaled.jpg", locationId: "1"},
   { tags: ["1", "3", "9"], author: "Jessika", reviewBody: "This one time at band camp, I had Decaf and it was about as good as the spelling of my name. Psh. Whats the point of Decaf anyway?!", reviewItem: "Coffee", imgUrl: "http://placekitten.com/g/200/300", locationId: "2"},
-  { tags: ["3"], author: "Marty McFly", reviewBody: "Doc! This Tea has to get back to the future!", reviewItem: "Tea", imgUrl: "http://placekitten.com/g/200/300", locationId: "1"},
-  { tags: ["1", "2", "4", "5", "6"], author: "Spider Man", reviewBody: "Everybody gets One!", reviewItem: "Cold Brew", imgUrl: "http://placekitten.com/g/200/300", locationId: "6"}
+  { tags: ["3"], author: "Marty McFly", reviewBody: "Doc! This Tea has to get back to the future!", reviewItem: "Tea", imgUrl: "../img/George_Clooney_2016.jpg", locationId: "1"},
+  { tags: ["1", "2", "4", "5", "6"], author: "Spider Man", reviewBody: "Everybody gets One!", reviewItem: "Cold Brew", imgUrl: "../img/Jennifer_Lopez.jpg", locationId: "6"}
 ]
 // const baseTagList = [ {name: "Decaffeinated"}, {name: "Caffeinated"}, {name: "Hot"}, {name: "Cold"} ]
 

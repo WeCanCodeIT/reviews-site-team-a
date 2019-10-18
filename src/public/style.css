@@ -64,13 +64,14 @@ html {
 .wrapper__review {
   display: flex;
 }
+
 .coffee-card {
   justify-content: center;
   align-items: space-between;
   max-width: 80%;
   padding: 5rem;
-
 }
+
 .Footer {
   grid-row: 4;
   grid-column: 1 / 4;
@@ -107,6 +108,14 @@ html {
   text-align: center;
 }
 
+li {
+  list-style: none;
+}
+.location-list-item {
+  display: flex;
+  padding: 1rem;
+  justify-content: center;
+}
 .Main {
   
   grid-row: 3 / 4;
@@ -170,7 +179,14 @@ html {
   align-items: center;
   justify-content: center;
   min-width: 8rem;
+  padding: 1rem;
   
+}
+
+.review-card__image {
+  width: 200px;
+  height: 300px;
+  /* justify-content: stretch; */
 }
 
 .review-form__form {
@@ -185,16 +201,16 @@ html {
   padding: 1rem;
 }
 
-/* .review-form-wrapper {
-  /* background-color: var(--form-background-color); */
-/* } */ 
+ .review-form-wrapper {
+   border: .2rem solid var(--form-border-color);
+ }  
 
 .review-items-wrapper {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
   margin: 2rem;
-  border: .2rem solid var(--form-border-color);
+  
 }
 
 
@@ -207,11 +223,28 @@ html {
   min-width: 75%;
 
 }
+
+.single-review-card__wrapper{
+  border: 2px, solid, black;
+}
 .single-review-card__body-wrapper {
   margin-right: center;
 }
 
+.single-review-card__title{
+  font-size: 23pt;
+}
 
+.single-review-card__location{
+  font-size: 18pt;
+}
+
+.single-review-card__author{
+  font-size: 20pt;
+}
+.single-review-card__body{
+  font-size: 16pt;
+}
 #submitButton{
   font-size: 80%;
   align-self: center;

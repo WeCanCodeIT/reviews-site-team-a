@@ -6,7 +6,7 @@
            <br>
             <ul name="locationId">  
                 {{#each locations}}
-                    <a href='/location/{{id}}'><li value="{{id}}">{{location}}</li></a>
+                    <a class="location-list-item" href='/location/{{id}}'><li value="{{id}}">{{location}}</li></a>
                 <br>
                 {{/each}}
             </ul>
@@ -31,5 +31,4 @@
         </label>
     {{/if}}
     </form> 
-
 </div>
