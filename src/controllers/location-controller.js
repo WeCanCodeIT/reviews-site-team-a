@@ -3,7 +3,6 @@ const locationService = require('../services/location-service');
 const Location = require('../models/Location.sequelize');
 
 class LocationController { 
-
     static async renderAll (req, res) {
         try {
             const locations = await locationService.findAll();
@@ -36,6 +35,5 @@ class LocationController {
         }
     }     
 }
-
 
 module.exports = LocationController;
